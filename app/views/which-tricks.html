@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/juggling-trick">Back</a>
+
+      <form class="form" action="/check-your-answers" method="post">
+        <div class="form-group">
+        <fieldset>
+
+           <legend>
+             <h3 class="heading-medium">Which of the below tricks can you do?</h3>
+             <span class="body-text">Select all that apply</span>
+           </legend>
+
+           <div class="multiple-choice">
+             <input id="mills-mess" name="which-tricks" type="checkbox" value="Mills Mess">
+             <label for="mills-mess">Mills Mess</label>
+           </div>
+           <div class="multiple-choice">
+             <input id="factory" name="which-tricks" type="checkbox" value="Factory">
+             <label for="factory">The Factory</label>
+           </div>
+           <div class="multiple-choice">
+             <input id="over-the-top" name="which-tricks" type="checkbox" value="Over the Top">
+             <label for="over-the-top">Over the top</label>
+           </div>
+
+         </fieldset>
+       </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
